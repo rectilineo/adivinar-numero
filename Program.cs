@@ -25,10 +25,10 @@ for (int bucle = 0; bucle < 3; bucle++)
     }
     if (numeroadivinado1 < numero)
     {
-        
+        vida = vida-1;
         Console.WriteLine($"Lo siento, te quedan {vida} vidas");
         Console.WriteLine("Tu numero es menor al que yo pensaba");
-        vida = vida-1;
+        
 
     }
     
@@ -37,8 +37,8 @@ for (int bucle = 0; bucle < 3; bucle++)
         Console.WriteLine("Introduce otro numero : ");
          numeroadivinado = Console.ReadLine();
          numeroadivinado1 = Int32.Parse(numeroadivinado);
-        Console.WriteLine($" Te quedan estos intentos {vida}");
-        vida = vida-1;
+        
+        
         
     }
     if (numeroadivinado1 == numero)
@@ -49,7 +49,8 @@ for (int bucle = 0; bucle < 3; bucle++)
 
 
     }
-    if (vida < 0)
+
+    if (vida == 1)
     {
         Console.WriteLine($"Lo siento, has perdido el número era {numero}");
         break;
